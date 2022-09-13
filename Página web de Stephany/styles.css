@@ -1,0 +1,415 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Montserrat', sans-serif;
+ 
+    
+    
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+}
+/* contenedor de menu de navegación */
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  
+    
+    
+}
+.shadow-button{
+    font-size: 20px;
+    color: #183153;
+}
+/*icono de la página*/
+.icono-de-pagina{
+    margin: 20px;
+}
+/*Manejo de las listas*/
+.nav-menu li{
+   display: inline-block;
+   margin: 20px;
+   
+   
+}
+/*Enlaces del menu de navegación*/
+.nav-menu a{
+    
+    color: #ffff;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+/*Imagen de banner, ajustes, tamaño, margen y pocisión*/
+.banner-one{
+   background-image:url(/img/ratitaEstasi.jpg);
+   background-repeat: no-repeat;
+   background-position-x: center;
+   background-position-y: center ;
+   background-size: cover;
+    width: 100%;
+    height: 500px;
+    
+    
+    
+}
+
+/*primer titulo ajustes*/
+.banner-one-items{
+    display: flex;
+ justify-content: center;
+ 
+ 
+    
+}
+
+    /*letras de bienvenidos*/
+.banner-one h1{
+    color: #ffff;
+    font-size: 40px;
+    text-align: start;
+    margin: 30px;
+    }
+    
+/*imagen de rata sobre raton */
+.rata-foto{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    
+}  
+/*Panel de habilidades*/
+.mis-habilidades{
+    /*Responsive con Gridd de la sección de habilidades*/
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem),1fr));
+    margin-top: auto;
+
+}
+/*contenedor de imágenes y letras del section*/
+.habiliades-container{
+    text-align: center;
+    width: 100%;
+/*ajustes de hover de las imágenes*/
+
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+    position: relative;
+}
+/*el hover que emite la función para escalar las cosas*/
+.habiliades-container:hover{
+    transform:scale(1.15);
+    -webkit-transform:scale(1.15);
+    -moz-transform:scale(1.15);
+    -ms-transform:scale(1.15);
+    -o-transform:scale(1.15);
+}
+/*H3 de hombres de las tecnologías*/
+.mis-habilidades h3{
+    color:#183153;
+}
+/* H2 del texto "mis habilidades"*/
+.mis-habilidades h2{
+    font-size: 35px;
+    margin-top: 20%;
+    color: #183153;
+}
+
+/*Título de los proyectos*/
+.titulos-h2{
+    color: #183153;
+    display: flex;
+    text-align: center;
+   justify-content: center;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+/*Sección de proyectos*/
+.mis-proyectos{
+    /*display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,19rem),1fr));
+    gap: 1rem;*/
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   
+    flex-wrap: wrap;
+}
+/*contenerdor de las tarjetas*/
+.card{
+    
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 15px;
+}
+
+.card .face{
+   position: absolute;
+   width:100%;
+   height: 100%;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   overflow: hidden;
+   transition: 1.5s;
+   -webkit-transition: 1.5s;
+   -moz-transition: 1.5s;
+   -ms-transition: 1.5s;
+   -o-transition: 1.5s;
+}
+
+/*Sección de la cara frontal de la tarjeta*/
+.card .front{
+    transform:perspective(600px) rotateY(0deg);
+    -webkit-transform:perspective(600px) rotateY(0deg);
+    -moz-transform:perspective(600px) rotateY(0deg);
+    -ms-transform:perspective(600px) rotateY(0deg);
+    -o-transform:perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+/*imagen de la cara frontal- configuraciones*/
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Título de la tarjeta*/
+.card .front h3{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    height: 45px;
+    line-height: 45px;
+    color: #ffff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+/*Parte trasera de la tarjeta*/
+.card .back{
+    /*Nota!!! Para poder manipular la tarjeta trasera se deben poner ambas rotaciones en 0
+    */
+    transform: perspective(600px)rotateY(180deg);
+    -webkit-transform: perspective(600px)rotateY(180deg);
+    -moz-transform: perspective(600px)rotateY(180deg);
+    -ms-transform: perspective(600px)rotateY(180deg);
+    -o-transform: perspective(600px)rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+/*Efecto de hover sobre card*/
+.card:hover .front{
+    /*Hover delantero configuración------180deg*/
+    transform:perspective(600px) rotateY(180deg);
+    -webkit-transform:perspective(600px) rotateY(180deg);
+    -moz-transform:perspective(600px) rotateY(180deg);
+    -ms-transform:perspective(600px) rotateY(180deg);
+    -o-transform:perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back{
+    /*Hover trasero configuración-------360deg*/transform:perspective(600px) rotateY(360deg);
+    -webkit-transform:perspective(600px) rotateY(360deg);
+    -moz-transform:perspective(600px) rotateY(360deg);
+    -ms-transform:perspective(600px) rotateY(360deg);
+    -o-transform:perspective(600px) rotateY(360deg);
+}
+/*Sección de íconos */
+.contacto-container{
+    display: flex;
+    justify-content: center;
+    background:rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100px;
+    
+    
+}
+.contacto-container a{
+    text-decoration: none;
+    color: #183153;
+    font-size: 3rem;
+    margin: 20px;
+}
+.Icono-container{
+    margin:20px;
+}
+
+
+/*secciónde mediaquerys  para el responsive*/
+@media screen and (max-width: 1120px) {
+   .banner-one-items{
+    display: flex;
+   }
+    .banner-one h1{
+        font-size: 35px;
+    }
+    .rata-foto{
+        width: 300px;
+        height:300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .icono-rata{
+        width: 50px;
+        height: 50px;
+    }
+    .nav-menu a{
+        margin: 5px;
+        font-size: 15px;
+        
+     }
+     .nav-menu li{
+        margin: 5px;
+        margin-top: 20px;
+     }
+   
+    .banner-one-items{
+     display: flex;
+    }
+     .banner-one h1{
+         font-size: 30px;
+     }
+     .rata-foto{
+         width: 200px;
+         height:200px;
+     }
+     
+     
+ }
+ 
+     
+ @media screen and (max-width: 500px) {
+    .icono-rata{
+        width: 30px;
+        height: 30px;
+    }
+    .icono-de-pagina{
+        margin: 10px;
+    }
+    .nav-menu a{
+        margin: 3px;
+        font-size: 15px;
+        
+     }
+     .nav-menu li{
+        margin: 0px;
+        margin-top: 10px;
+     }
+     .banner-one{
+        width: 100%;
+        height: 300px;
+     }
+     .banner-one h1{
+         font-size: 18px;
+     }
+     
+     .rata-foto{
+         width: 150px;
+         height:150px;
+     }
+     .contacto-container a{
+        margin: 10px;
+     }
+ }
+ @media screen and (max-width: 400px) {
+    .icono-rata{
+        width: 20px;
+        height: 20px;
+    }
+    .icono-de-pagina{
+        margin: 5px;
+    }
+    .nav-menu a{
+        margin: 2px;
+        font-size: 13px;
+        
+     }
+     .nav-menu li{
+        margin: 0px;
+        margin-top: 10px;
+     }
+     .banner-one{
+        width: 100%;
+        height: 250px;
+     }
+     .banner-one h1{
+         font-size: 18px;
+     }
+     
+     .rata-foto{
+         width: 150px;
+         height:150px;
+     }
+     .contacto-container a{
+        margin: 10px;
+     }
+ }
+
+@media screen and (max-width: 350px) {
+    
+    .banner-one h1{
+        font-size: 18px;
+    }
+    .rata-foto{
+        width: 100px;
+        height:100px;
+    }
+    .contacto-container a{
+       margin: 0px
+       
+    }
+    .Icono-container{
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 300px) {
+    
+    .banner-one h1{
+        font-size: 18px;
+    }
+    .rata-foto{
+        width: 100px;
+        height:100px;
+    }
+    .contacto-container a{
+       margin: 0px;
+       font-size: 2rem;
+    }
+    .Icono-container{
+        margin: 20px;
+    }
+}
+
+
